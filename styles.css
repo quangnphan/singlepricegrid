@@ -1,0 +1,113 @@
+ :root{
+--Cyan: hsl(179, 67%, 50%);
+--BrightYellow: hsl(71, 73%, 54%);
+--LightGray: hsl(204, 43%, 93%);
+--GrayishBlue: hsl(218, 22%, 67%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'karla', sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 400px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:  0 0 14px 1px #00000024;
+}
+.box{
+    padding: 35px;
+}
+.item1{
+   background-color: #fff;
+}
+.item1 h3{
+    color:hsl(179, 64%, 53%);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.item1 h4{
+    color: var(--BrightYellow);
+    margin-bottom: 15px;
+}
+.item1 p{
+    color: var(--GrayishBlue);
+    line-height: 1.5;
+}
+.item2{
+    background-color: var(--Cyan);
+}
+.item2 h3{
+    color: #fff;
+    margin-bottom: 15px;
+}
+.item2 h4{
+    color: var(--GrayishBlue);
+    margin-bottom: 15px;
+}
+.item2 span{
+    color: #fff;
+    font-size: 30px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+.item2 h5{
+    color:hsl(204, 43%, 93%);
+    margin-bottom: 15px;
+}
+.btn{
+    background-color: hsl(71, 73%, 54%);
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 400;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.btn:hover{
+    color: crimson;
+}
+.item3{
+    background-color: hsl(179, 66%, 63%);
+}
+.item3 h3{
+    color: #fff;
+    margin-bottom: 15px;
+}
+.item3 p{
+    color:hsl(213, 27%, 94%);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+@media (min-width: 1000px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;
+        margin: 80px auto;
+    }
+    .item1{
+        grid-area: 1/1/2/3;
+    }
+    .item2,
+    .item3{
+        grid-row: 2;
+    }
+}
